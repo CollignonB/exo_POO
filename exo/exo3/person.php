@@ -6,9 +6,9 @@ class Person {
     protected string $adresse;
 
     public function __construct(?array $info){
-        $this->nom = $info["nom"];
-        $this->prenom = $info["prenom"];
-        $this->adresse = $info["adresse"];
+        $this->setNom($info["nom"]);
+        $this->setPrenom($info["prenom"]);
+        $this->setAdresse($info["adresse"]);
     }
 
     public function setNom(string $nom){
