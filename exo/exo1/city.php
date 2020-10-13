@@ -4,6 +4,11 @@ class City {
     protected string $nom;
     protected string $departement;
 
+    public function __construct(?string $nom, ?string $departement){
+        $this->nom = $nom;
+        $this->departement = $departement;
+    }
+
     public function setNom(string $nom){
         $this->nom = $nom;
     }
