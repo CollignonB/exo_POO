@@ -9,7 +9,9 @@ $student->setId("azerty123");
 
 
 var_dump($student);
-var_dump($student2);
+// var_dump($student2);
 // var_dump($student3);
 
-echo $student->getId();
+// echo $student->getId();
+Student::setBase("18");
+echo "<p>Base code : " . Student::$base . "</p>";
