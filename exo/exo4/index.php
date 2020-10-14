@@ -5,5 +5,5 @@ include "form.php";
 $form = new Form("");
 $form->setText("name");
 $form->setText("amount");
-$form->setSubmit("form", "envoyer");
+$form->setSubmit("envoyer", "send");
 $form->showForm();

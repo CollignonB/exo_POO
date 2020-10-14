@@ -11,8 +11,8 @@
             $this->form .= "<input type='text' name='". $name . "'></br>";
         }
 
-        public function setSubmit(string $jesaispas, string $name){
-            $this->form .= "<input type='submit' value = '" . $name . "'> </form>";
+        public function setSubmit(string $value, string $name){
+            $this->form .= "<input type='submit' value = '" . $value . "' name='" . $name . "'> </form>";
         }
 
         public function showForm(){
