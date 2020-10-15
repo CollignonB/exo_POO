@@ -1,17 +1,14 @@
 <?php 
-require "student.php"; 
+require "model/entity/student.php"; 
+require "model/studentModel.php";
 
-$student = new Student("Patick", 17);
-$student2 = new Student("Georgette", 21);
-// $student3 = new Student();
+$studentModel = new StudentModel();
 
-$student->setId("azerty123");
+if(isset($_POST["newStudent"])){
+    $student = new Student($_POST);
+    $studentModel->addStudent($student);
+}
 
+$students = $studentModel->getStudents();
 
-var_dump($student);
-// var_dump($student2);
-// var_dump($student3);
-
-// echo $student->getId();
-Student::setBase("18");
-echo "<p>Base code : " . Student::$base . "</p>";
+include "view/indexView.php";
